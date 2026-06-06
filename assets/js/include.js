@@ -7,10 +7,6 @@
 
   // --- Components base path ---
   var basePath = '';
-  // Detect if we're in a subfolder (pages/) to adjust component paths
-  if (window.location.pathname.indexOf('/pages/') !== -1) {
-    basePath = '../';
-  }
 
   // --- Load Header ---
   var headerPlaceholder = document.getElementById('header-placeholder');
@@ -52,7 +48,7 @@
       'saunazilla-blog-image.avif'
     ];
     var randomIndex = Math.floor(Math.random() * images.length);
-    contentImage.src = basePath + 'assets/images/' + images[randomIndex];
+    contentImage.src = 'assets/images/' + images[randomIndex];
   }
 
   // --- Mobile Menu Toggle ---
